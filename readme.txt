@@ -8,40 +8,41 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Automatically refreshes the frontend page when a post or page is saved by an admin or editor. Also clears cache to reflect updated content.
-
 == Description ==
+**Auto Refresh on Save** automatically refreshes the frontend page whenever it is saved or updated in the WordPress editor. No need to manually reload the page. Ideal for admins and editors managing live content updates.
 
-The **Auto Refresh on Save** plugin ensures that when a page or post is updated, the frontend automatically refreshes for logged-in admins or editors. No more manual reloads! This plugin also clears the cache for the page to reflect the latest changes immediately.
+= Key Features: =
+- Automatically refreshes the frontend after saving posts or pages.
+- Uses lightweight AJAX to detect changes without overloading the server.
+- Compatible with all WordPress themes and builders.
+- Cache-busting to ensure the latest content loads.
 
-**Features:**
-
-* Auto-refresh frontend page on save/update.
-* Cache clearing for updated posts.
-* Works only for admins or editors.
-* Lightweight and easy to use.
+Keep your frontend view always up-to-date, saving time and effort.
 
 == Installation ==
-
-1. Upload the `auto-refresh-on-save` folder to the `/wp-content/plugins/` directory.
+1. Download the plugin and upload it to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Edit a page/post, save it, and watch the magic!
+3. Edit and save any page or post to see the auto-refresh in action.
 
 == Frequently Asked Questions ==
 
-= Does it work with all caching plugins? =
+= Does this plugin work with custom post types? =  
+Yes, the plugin works with all post types including custom ones.
 
-Yes, it flushes the cache using `wp_cache_flush()`, compatible with WP Super Cache and similar plugins.
+= Will it conflict with caching plugins? =  
+No, the plugin ensures cache-busting on reload to avoid conflicts.
 
-= Will the refresh happen for all users? =
-
-No, only logged-in admins or editors will experience the auto-refresh.
+= Is this plugin compatible with page builders? =  
+Yes, it works seamlessly with Elementor, Divi, and other builders.
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0 =
 * Initial release.
 
-== License ==
+== Upgrade Notice ==
+= 1.0 =
+No upgrades yet. This is the initial release.
 
-This plugin is licensed under the GPL2. See https://www.gnu.org/licenses/gpl-2.0.html for more details.
+== Support ==  
+For support, visit [yourwebsite.com/support](https://yourwebsite.com/support).

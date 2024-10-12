@@ -1,20 +1,25 @@
 jQuery(document).ready(function ($) {
-    if (arsData.lastSaved > 0) {
-        const savedTime = parseInt(arsData.lastSaved);
-        const refreshInterval = 3000;
+    const postId = parseInt(arsData.currentPostId, 10);
+    const lastSavedTime = parseInt(arsData.lastSaved, 10);
+    const pollingInterval = 5000; // Poll every 5 seconds.
 
-        setInterval(() => {
-            $.ajax({
-                url: window.location.href,
-                method: 'HEAD',
-                success: function (_, status, xhr) {
-                    const lastModified = new Date(xhr.getResponseHeader('Last-Modified')).getTime() / 1000;
-                    if (lastModified > savedTime) {
-                        console.log('Page refreshed due to update.');
-                        location.reload(true);
-                    }
-                },
-            });
-        }, refreshInterval);
+    function checkForUpdates() {
+        $.ajax({
+            url: arsData.ajaxUrl,
+            method: 'POST',
+            data: {
+                action: 'check_page_update',
+                post_id: postId,
+            },
+            success: function (response) {
+                if (response.success && response.data.lastSaved > lastSavedTime) {
+                    location.reload(true); // Reload with cache-busting.
+                }
+            },
+        });
+
+        setTimeout(checkForUpdates, pollingInterval); // Schedule next check.
     }
+
+    checkForUpdates(); // Start polling.
 });
