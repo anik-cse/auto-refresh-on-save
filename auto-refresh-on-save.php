@@ -5,7 +5,7 @@
  * Description: Automatically refreshes the frontend page when an admin or editor saves or updates it. Clears cache to ensure the latest content is visible.
  * Version: 1.0.0
  * Author: Mir Monoarul Alam
- * Author URI: https://yourwebsite.com
+ * Author URI: http://mirm.pro/
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: auto-refresh-on-save
