@@ -39,10 +39,3 @@ Yes, it works seamlessly with Elementor, Divi, and other builders.
 
 = 1.0 =
 * Initial release.
-
-== Upgrade Notice ==
-= 1.0 =
-No upgrades yet. This is the initial release.
-
-== Support ==  
-For support, visit [yourwebsite.com/support](https://yourwebsite.com/support).
